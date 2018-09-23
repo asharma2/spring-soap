@@ -6,7 +6,7 @@
 //
 
 
-package org.spring.soap.students;
+package com.concretepage.article;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentDetails" type="{http://soap.spring.org/students}StudentDetails"/>
+ *         &lt;element name="articleInfo" type="{http://www.concretepage.com/article}articleInfo"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "studentDetails"
+    "articleInfo"
 })
-@XmlRootElement(name = "GetStudentDetailsResponse")
-public class GetStudentDetailsResponse {
+@XmlRootElement(name = "getArticleByIdResponse")
+public class GetArticleByIdResponse {
 
-    @XmlElement(name = "StudentDetails", required = true)
-    protected StudentDetails studentDetails;
+    @XmlElement(required = true)
+    protected ArticleInfo articleInfo;
 
     /**
-     * Gets the value of the studentDetails property.
+     * Gets the value of the articleInfo property.
      * 
      * @return
      *     possible object is
-     *     {@link StudentDetails }
+     *     {@link ArticleInfo }
      *     
      */
-    public StudentDetails getStudentDetails() {
-        return studentDetails;
+    public ArticleInfo getArticleInfo() {
+        return articleInfo;
     }
 
     /**
-     * Sets the value of the studentDetails property.
+     * Sets the value of the articleInfo property.
      * 
      * @param value
      *     allowed object is
-     *     {@link StudentDetails }
+     *     {@link ArticleInfo }
      *     
      */
-    public void setStudentDetails(StudentDetails value) {
-        this.studentDetails = value;
+    public void setArticleInfo(ArticleInfo value) {
+        this.articleInfo = value;
     }
 
 }

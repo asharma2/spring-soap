@@ -37,4 +37,20 @@ public class WebServiceConfig {
 	public XsdSchema studentsSchema() {
 		return new SimpleXsdSchema(new ClassPathResource("student-details.xsd"));
 	}
+
+	@Bean(name = "articles")
+	public DefaultWsdl11Definition articleWsdl11Definition(XsdSchema articlesSchema) {
+		DefaultWsdl11Definition definition = new DefaultWsdl11Definition();
+		definition.setPortTypeName("ArticlePort");
+		definition.setTargetNamespace("http://www.concretepage.com/article");
+		definition.setLocationUri("/ws");
+		definition.setSchema(articlesSchema);
+		return definition;
+	}
+
+	@Bean
+	public XsdSchema articlesSchema() {
+		return new SimpleXsdSchema(new ClassPathResource("articles.xsd"));
+	}
+
 }

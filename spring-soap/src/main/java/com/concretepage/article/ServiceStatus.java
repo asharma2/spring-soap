@@ -6,7 +6,7 @@
 //
 
 
-package org.spring.soap.students;
+package com.concretepage.article;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,18 +15,17 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for StudentDetails complex type.
+ * <p>Java class for serviceStatus complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="StudentDetails">
+ * &lt;complexType name="serviceStatus">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="passportNumber" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="statusCode" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,81 +35,63 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StudentDetails", propOrder = {
-    "id",
-    "name",
-    "passportNumber"
+@XmlType(name = "serviceStatus", propOrder = {
+    "statusCode",
+    "message"
 })
-public class StudentDetails {
+public class ServiceStatus {
 
-    protected int id;
     @XmlElement(required = true)
-    protected String name;
+    protected String statusCode;
     @XmlElement(required = true)
-    protected String passportNumber;
+    protected String message;
 
     /**
-     * Gets the value of the id property.
-     * 
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * Sets the value of the id property.
-     * 
-     */
-    public void setId(int value) {
-        this.id = value;
-    }
-
-    /**
-     * Gets the value of the name property.
+     * Gets the value of the statusCode property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getName() {
-        return name;
+    public String getStatusCode() {
+        return statusCode;
     }
 
     /**
-     * Sets the value of the name property.
+     * Sets the value of the statusCode property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setName(String value) {
-        this.name = value;
+    public void setStatusCode(String value) {
+        this.statusCode = value;
     }
 
     /**
-     * Gets the value of the passportNumber property.
+     * Gets the value of the message property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getPassportNumber() {
-        return passportNumber;
+    public String getMessage() {
+        return message;
     }
 
     /**
-     * Sets the value of the passportNumber property.
+     * Sets the value of the message property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setPassportNumber(String value) {
-        this.passportNumber = value;
+    public void setMessage(String value) {
+        this.message = value;
     }
 
 }

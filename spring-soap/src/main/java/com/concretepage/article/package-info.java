@@ -5,5 +5,5 @@
 // Generated on: 2018.09.23 at 06:26:17 PM IST 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://soap.spring.org/students", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package org.spring.soap.students;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.concretepage.com/article", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package com.concretepage.article;

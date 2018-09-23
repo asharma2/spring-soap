@@ -6,7 +6,7 @@
 //
 
 
-package org.spring.soap.students;
+package com.concretepage.article;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,18 +15,18 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for StudentDetails complex type.
+ * <p>Java class for articleInfo complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="StudentDetails">
+ * &lt;complexType name="articleInfo">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="passportNumber" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="articleId" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="title" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="category" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,81 +36,81 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "StudentDetails", propOrder = {
-    "id",
-    "name",
-    "passportNumber"
+@XmlType(name = "articleInfo", propOrder = {
+    "articleId",
+    "title",
+    "category"
 })
-public class StudentDetails {
+public class ArticleInfo {
 
-    protected int id;
+    protected long articleId;
     @XmlElement(required = true)
-    protected String name;
+    protected String title;
     @XmlElement(required = true)
-    protected String passportNumber;
+    protected String category;
 
     /**
-     * Gets the value of the id property.
+     * Gets the value of the articleId property.
      * 
      */
-    public int getId() {
-        return id;
+    public long getArticleId() {
+        return articleId;
     }
 
     /**
-     * Sets the value of the id property.
+     * Sets the value of the articleId property.
      * 
      */
-    public void setId(int value) {
-        this.id = value;
+    public void setArticleId(long value) {
+        this.articleId = value;
     }
 
     /**
-     * Gets the value of the name property.
+     * Gets the value of the title property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
     /**
-     * Sets the value of the name property.
+     * Sets the value of the title property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setName(String value) {
-        this.name = value;
+    public void setTitle(String value) {
+        this.title = value;
     }
 
     /**
-     * Gets the value of the passportNumber property.
+     * Gets the value of the category property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getPassportNumber() {
-        return passportNumber;
+    public String getCategory() {
+        return category;
     }
 
     /**
-     * Sets the value of the passportNumber property.
+     * Sets the value of the category property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setPassportNumber(String value) {
-        this.passportNumber = value;
+    public void setCategory(String value) {
+        this.category = value;
     }
 
 }
